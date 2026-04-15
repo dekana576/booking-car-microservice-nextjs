@@ -9,7 +9,7 @@ import ErrorText from "@/components/ui/text/error-text";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function ListDriverPage() {
+export default function ListUserPage() {
 //   const [search, setSearch] = useState<string>("");
 
 //   const { data, isLoading, error } = useGetDriverList(search);
