@@ -1,5 +1,5 @@
 
-import EditUserPage from "@/components/pages/user/edit-user-page";
+import EditUserPage from "@/components/pages/admin/edit-admin-page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

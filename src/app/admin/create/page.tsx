@@ -1,4 +1,4 @@
-import CreateUserPage from "@/components/pages/user/create-user-page";
+import CreateUserPage from "@/components/pages/admin/create-admin-page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

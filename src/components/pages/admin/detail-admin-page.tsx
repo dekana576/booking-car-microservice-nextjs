@@ -1,5 +1,5 @@
 "use client";
-import UserDetailCard from "@/components/fragments/card/user-detail-card";
+import UserDetailCard from "@/components/fragments/card/admin/admin-detail-card";
 // import DriverDetailCard from "@/components/fragments/card/driver-detail-card";
 import BackButton from "@/components/ui/button/back-button";
 import SpinnerLoading from "@/components/ui/loading/spinner-loading";

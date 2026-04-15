@@ -1,5 +1,5 @@
 
-import DetailUserPage from "@/components/pages/user/detail-user-page";
+import DetailUserPage from "@/components/pages/admin/detail-admin-page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
