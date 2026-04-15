@@ -3,7 +3,7 @@ import DetailUserPage from "@/components/pages/admin/detail-admin-page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Detail User | OTW TL",
+  title: "Detail User | User Management",
 };
 
 export default function DetailUser() {
