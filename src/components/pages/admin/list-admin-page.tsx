@@ -1,18 +1,17 @@
 "use client";
-import UserCard from "@/components/fragments/card/admin/admin-card";
-// import DriverCard from "@/components/fragments/card/driver-card";
+import UserCard from "@/components/fragments/card/admin/user-card";
 import BackButton from "@/components/ui/button/back-button";
 import Button from "@/components/ui/button/button";
 import SpinnerLoading from "@/components/ui/loading/spinner-loading";
 import ErrorText from "@/components/ui/text/error-text";
-// import { useGetDriverList } from "@/features/driver/use-get-driver-list";
+import { useGetUserList } from "@/features/user/use-get-user-list";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function ListUserPage() {
-//   const [search, setSearch] = useState<string>("");
+  const [search, setSearch] = useState<string>("");
 
-//   const { data, isLoading, error } = useGetDriverList(search);
+  const { data, isLoading, error } = useGetUserList();
 
   return (
     <div className="space-y-4 w-full">
@@ -24,10 +23,10 @@ export default function ListUserPage() {
         <input
           type="text"
           name="name"
-          placeholder="Search user..."
+          placeholder="Search driver..."
           className="p-1 text-sm border rounded w-1/2"
-        //   value={search}
-        //   onChange={(e) => setSearch(e.target.value)}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
         />
         <Link href="/admin/create">
           <Button className="bg-blue-500 w-fit h-fit text-end">
@@ -36,7 +35,7 @@ export default function ListUserPage() {
         </Link>
       </div>
 
-      {/* {isLoading && (
+      {isLoading && (
         <div className="text-center">
           <SpinnerLoading />
         </div>
@@ -48,23 +47,19 @@ export default function ListUserPage() {
         </div>
       )}
 
-      {!isLoading && !error && data?.data?.length === 0 && (
+      {!isLoading && !error && data?.length === 0 && (
         <div className="text-center">
-          <ErrorText message="Driver not found" />
+          <ErrorText message="User not found" />
         </div>
       )}
 
-      {!isLoading && !error && data?.data && (
+      {!isLoading && !error && data && (
         <div className="space-y-2 w-full">
-          {data.data.map((driver) => (
-            <DriverCard key={driver.id} driver={driver} />
+          {data.map((user) => (
+            <UserCard key={user.id} user={user} />
           ))}
         </div>
-      )} */}
-
-      <div className="space-y-2 w-full">
-        <UserCard />
-      </div>
+      )}
     </div>
   );
 }

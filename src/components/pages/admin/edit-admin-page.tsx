@@ -1,15 +1,17 @@
 "use client";
-// import EditDriverForm from "@/components/fragments/form/driver/edit-driver-form";
+import EditUserForm from "@/components/fragments/form/admin/edit-admin-form";
 import BackButton from "@/components/ui/button/back-button";
 import SpinnerLoading from "@/components/ui/loading/spinner-loading";
 import ErrorText from "@/components/ui/text/error-text";
-// import { useGetDriverById } from "@/features/driver/use-get-driver-by-id";
+import { useGetUserById } from "@/features/user/use-get-user-by-id";
 import { useParams } from "next/navigation";
 
 export default function EditUserPage() {
-//   const { driverId } = useParams<{ driverId: string }>();
+  const { Id } = useParams<{ Id: string }>();
 
-//   const { data, isLoading, error } = useGetDriverById(driverId);
+  const { data, isLoading, error } = useGetUserById(Number(Id));
+
+  console.log(Id);
 
   return (
     <div className="space-y-4 w-full">
@@ -17,7 +19,7 @@ export default function EditUserPage() {
 
       <BackButton />
 
-      {/* {isLoading && (
+      {isLoading && (
         <div className="text-center">
           <SpinnerLoading />
         </div>
@@ -29,10 +31,9 @@ export default function EditUserPage() {
         </div>
       )}
 
-      {!isLoading && !error && data?.data && (
-        <EditDriverForm driver={data.data} />
-      )} */}
-
+      {!isLoading && !error && data && (
+        <EditUserForm user={data} />
+      )}
     </div>
   );
 }

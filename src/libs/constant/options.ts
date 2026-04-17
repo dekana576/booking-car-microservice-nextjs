@@ -1,0 +1,1 @@
+export const USER_ROLE_OPTIONS = ["ADMIN", "CUSTOMER", "DRIVER"];

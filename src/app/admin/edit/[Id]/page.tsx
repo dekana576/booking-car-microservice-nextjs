@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Edit User | User Management",
 };
 
-export default function EditUser() {
+export default function EditUser(
+) {
   return <EditUserPage />;
 }

@@ -1,5 +1,5 @@
 "use client";
-import CreateUserForm from "@/components/fragments/form/admin/create-admin-form";
+import CreateUserForm from "@/components/fragments/form/admin/create-user-form";
 import BackButton from "@/components/ui/button/back-button";
 
 export default function CreateUserPage() {

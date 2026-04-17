@@ -1,18 +1,13 @@
 "use client";
 import Button from "@/components/ui/button/button";
 import ErrorText from "@/components/ui/text/error-text";
-import { useUpdateUser } from "@/features/user/use-update-user";
+import { useCreateUser } from "@/features/user/use-create-user";
 import {
   USER_ROLE_OPTIONS,
 } from "@/libs/constant/options";
-import { IUser } from "@/types/user.types";
 
-interface IEditUserFormProps {
-  user: IUser;
-}
-
-export default function EditUserForm({ user }: IEditUserFormProps) {
-  const { formik, isLoading } = useUpdateUser(user);
+export default function CreateUserForm() {
+  const { formik, isLoading } = useCreateUser();
 
   return (
     <form onSubmit={formik.handleSubmit} className="bg-white space-y-2">
@@ -24,6 +19,7 @@ export default function EditUserForm({ user }: IEditUserFormProps) {
           onChange={formik.handleChange}
           value={formik.values.name}
           className="w-full mt-1 p-1 border rounded"
+          placeholder="Enter user name..."
         />
         {formik.touched.name && formik.errors.name && (
           <ErrorText message={formik.errors.name} />
@@ -38,33 +34,35 @@ export default function EditUserForm({ user }: IEditUserFormProps) {
           onChange={formik.handleChange}
           value={formik.values.email}
           className="w-full mt-1 p-1 border rounded"
+          placeholder="Enter user email..."
         />
         {formik.touched.email && formik.errors.email && (
           <ErrorText message={formik.errors.email} />
         )}
       </div>
-
       <div>
         <label className="text-sm font-medium">Password</label>
         <input
-          type="Password"
+          type="password"
           name="password"
           onChange={formik.handleChange}
           value={formik.values.password}
           className="w-full mt-1 p-1 border rounded"
+          placeholder="Enter user password..."
         />
         {formik.touched.password && formik.errors.password && (
           <ErrorText message={formik.errors.password} />
         )}
       </div>
       <div>
-        <label className="text-sm font-medium">Phone</label>
+        <label className="text-sm font-medium">Phone Number</label>
         <input
           type="text"
           name="phone"
           onChange={formik.handleChange}
           value={formik.values.phone}
           className="w-full mt-1 p-1 border rounded"
+          placeholder="Enter user phone number..."
         />
         {formik.touched.phone && formik.errors.phone && (
           <ErrorText message={formik.errors.phone} />
@@ -87,10 +85,9 @@ export default function EditUserForm({ user }: IEditUserFormProps) {
         </select>
       </div>
 
-
       <div className="flex justify-end gap-2">
         <Button type="submit" disabled={isLoading}>
-          {isLoading ? "Updating..." : "Update"}
+          {isLoading ? "Create..." : "Create"}
         </Button>
       </div>
     </form>
