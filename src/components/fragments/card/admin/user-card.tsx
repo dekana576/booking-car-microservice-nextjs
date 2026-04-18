@@ -19,7 +19,7 @@ export default function UserCard({user} : IUserCardProps) {
       </div>
 
       <div className="flex gap-2">
-        <Link href={`/admin/${user.id}`}>
+        <Link href={`/admin/user/${user.id}`}>
           <Button className="bg-orange-500 text-xs">Detail</Button>
         </Link>
         <Link href={`/admin/edit/${user.id}`}>

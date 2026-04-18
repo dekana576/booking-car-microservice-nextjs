@@ -47,10 +47,10 @@ export default function EditUserForm({ user }: IEditUserFormProps) {
       <div>
         <label className="text-sm font-medium">Password</label>
         <input
-          type="Password"
+          type="password"
           name="password"
           onChange={formik.handleChange}
-          value={formik.values.password}
+          value={formik.values.password || undefined}
           className="w-full mt-1 p-1 border rounded"
         />
         {formik.touched.password && formik.errors.password && (

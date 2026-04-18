@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "@/styles/global.css"
-import RootLayoutComponent from "@/components/layouts/root-layout";
+import "@/styles/global.css";
+import AdminLayout from "@/components/layouts/admin/layout-admin";
 
 export const metadata: Metadata = {
   title: "Management User",
@@ -13,7 +13,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div>
-    <RootLayoutComponent>{children}</RootLayoutComponent>
-  </div>;
+  return (
+      <AdminLayout>{children}</AdminLayout>
+  );
 }

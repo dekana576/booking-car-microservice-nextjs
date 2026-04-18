@@ -17,8 +17,8 @@ export const CreateUserSchema = yup.object({
     .required("Phone number is required"),
 
   role: yup
-    .mixed<"ADMIN" | "USER">()
-    .oneOf(["ADMIN", "USER"], "Invalid role")
+    .mixed<"ADMIN" | "CUSTOMER" | "DRIVER">()
+    .oneOf(["ADMIN", "CUSTOMER", "DRIVER"], "Invalid role")
     .required("Role is required"),
 });
 

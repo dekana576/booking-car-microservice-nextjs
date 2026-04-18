@@ -19,15 +19,7 @@ export default function ListUserPage() {
 
       <BackButton />
 
-      <div className="flex justify-between items-center gap-2">
-        <input
-          type="text"
-          name="name"
-          placeholder="Search driver..."
-          className="p-1 text-sm border rounded w-1/2"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+      <div className="flex justify-end items-center gap-2">
         <Link href="/admin/create">
           <Button className="bg-blue-500 w-fit h-fit text-end">
             Create User

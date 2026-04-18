@@ -1,4 +1,4 @@
-export default function RootLayoutHeader() {
+export default function AdminLayoutHeader() {
   return (
     <header
       className="flex justify-start gap-2 items-center py-4 w-full rounded-lg"
