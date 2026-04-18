@@ -1,10 +1,10 @@
 "use server";
 import { ICreateUserRequest, IUpdateUserRequest, IUser } from "@/types/user.types";
-import { AxiosInstance } from "../axios-instance";
+import { UserInstance } from "../axios/user-instance";
 
 export const getUserList = async () => {
   try {
-    const response = await AxiosInstance<IUser[]>({
+    const response = await UserInstance<IUser[]>({
       method: "GET",
       url: `/users`,
     });
@@ -17,7 +17,7 @@ export const getUserList = async () => {
 
 export const getUserById = async (Id: number) => {
   try {
-    const response = await AxiosInstance<IUser>({
+    const response = await UserInstance<IUser>({
       method: "GET",
       url: `/users/${Id}`,
     });
@@ -30,7 +30,7 @@ export const getUserById = async (Id: number) => {
 
 export const createUser = async (body: ICreateUserRequest) => {
   try {
-    const response = await AxiosInstance<IUser>({
+    const response = await UserInstance<IUser>({
       method: "POST",
       url: `/users`,
       data: body,
@@ -50,7 +50,7 @@ export const updateUser = async ({
   body: IUpdateUserRequest;
 }) => {
   try {
-    const response = await AxiosInstance<IUser>({
+    const response = await UserInstance<IUser>({
       method: "PUT",
       url: `/users/${Id}`,
       data: body,
@@ -64,7 +64,7 @@ export const updateUser = async ({
 
 export const deleteUser = async (Id: number) => {
   try {
-    const response = await AxiosInstance<IUser>({
+    const response = await UserInstance<IUser>({
       method: "DELETE",
       url: `/users/${Id}`,
     });

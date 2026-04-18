@@ -3,7 +3,7 @@ import EditUserForm from "@/components/fragments/form/admin/edit-admin-form";
 import BackButton from "@/components/ui/button/back-button";
 import SpinnerLoading from "@/components/ui/loading/spinner-loading";
 import ErrorText from "@/components/ui/text/error-text";
-import { useGetUserById } from "@/features/user/use-get-user-by-id";
+import { useGetUserById } from "@/features/admin/use-get-user-by-id";
 import { useParams } from "next/navigation";
 
 export default function EditUserPage() {

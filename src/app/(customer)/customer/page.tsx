@@ -1,9 +1,10 @@
+import ListOrderPage from "@/components/pages/customer/list-order-page";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "List Order | Order Management",
+};
 
-export default function CustomerPage() {
-    return (
-        <div className="">
-            <p>Customer Page</p>
-        </div>
-    )
+export default function User() {
+  return <ListOrderPage />;
 }

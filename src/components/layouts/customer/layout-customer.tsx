@@ -1,4 +1,4 @@
-import CustomerLayoutHeader from "@/components/fragments/header/customer-layout-header";
+import CustomerLayoutHeader from "@/components/fragments/header/auth-layout-header";
 import { Toaster } from "react-hot-toast";
 
 export default function CustomerLayout({

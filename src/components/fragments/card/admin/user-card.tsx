@@ -1,6 +1,6 @@
 import Button from "@/components/ui/button/button";
 import Link from "next/link";
-import {useDeleteUser} from "@/features/user/use-delete-user";
+import {useDeleteUser} from "@/features/admin/use-delete-user";
 import {IUser} from "@/types/user.types";
 
 interface IUserCardProps {

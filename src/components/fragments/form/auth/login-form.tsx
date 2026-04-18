@@ -11,9 +11,6 @@ export default function LoginForm() {
     <div className="w-full flex justify-center">
       <div className="space-y-4 w-100">
         <form onSubmit={formik.handleSubmit}>
-          <h2 className="font-bold text-lg text-center">
-            Hello User, Welcome!
-          </h2>
 
           {/* EMAIL */}
           <div>

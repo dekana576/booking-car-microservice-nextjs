@@ -1,5 +1,5 @@
 "use server";
-import { AxiosInstance } from "../axios-instance";
+import { UserInstance } from "../axios/user-instance";
 
 interface ILoginRequest {
   email: string;
@@ -12,7 +12,7 @@ interface ILoginResponse {
 
 export const login = async (body: ILoginRequest) => {
   try {
-    const response = await AxiosInstance<ILoginResponse>({
+    const response = await UserInstance<ILoginResponse>({
       method: "POST",
       url: `/login`,
       data: body,

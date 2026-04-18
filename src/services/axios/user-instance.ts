@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 
-const createInstance = (withAuth: boolean = true) => {
+const createInstance = () => {
   const instance = axios.create({
     baseURL: `${process.env.API_BASE_URL_USER}`,
     timeout: 30000,
@@ -15,9 +15,9 @@ const createInstance = (withAuth: boolean = true) => {
 };
 
 
-export const AxiosInstance = async<T = any>(
+export const UserInstance = async<T = any>(
   config: AxiosRequestConfig,
 ): Promise<AxiosResponse<T>> => {
-  const instance = createInstance(false);
+  const instance = createInstance();
   return instance(config);
 };

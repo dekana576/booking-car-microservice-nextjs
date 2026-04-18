@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/ui/button/button";
 import ErrorText from "@/components/ui/text/error-text";
-import { useUpdateUser } from "@/features/user/use-update-user";
+import { useUpdateUser } from "@/features/admin/use-update-user";
 import {
   USER_ROLE_OPTIONS,
 } from "@/libs/constant/options";

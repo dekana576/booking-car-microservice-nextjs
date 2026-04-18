@@ -10,7 +10,7 @@ export default function RootLayoutComponent({
       <html lang="en">
         <body>
           <div className="flex min-h-screen items-center justify-center bg-gray-300 font-sans">
-            <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-4 px-4 bg-white sm:items-start rounded-lg">
+            <main className="flex w-full max-w-3xl flex-col items-center justify-between py-4 px-4 bg-white sm:items-start rounded-lg">
               {children}
             </main>
           </div>

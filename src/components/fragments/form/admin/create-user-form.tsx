@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/ui/button/button";
 import ErrorText from "@/components/ui/text/error-text";
-import { useCreateUser } from "@/features/user/use-create-user";
+import { useCreateUser } from "@/features/admin/use-create-user";
 import {
   USER_ROLE_OPTIONS,
 } from "@/libs/constant/options";
