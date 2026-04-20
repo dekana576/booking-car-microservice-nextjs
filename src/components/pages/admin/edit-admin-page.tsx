@@ -1,5 +1,5 @@
 "use client";
-import EditUserForm from "@/components/fragments/form/admin/edit-admin-form";
+import EditUserForm from "@/components/fragments/form/admin/edit-user-form";
 import BackButton from "@/components/ui/button/back-button";
 import SpinnerLoading from "@/components/ui/loading/spinner-loading";
 import ErrorText from "@/components/ui/text/error-text";
