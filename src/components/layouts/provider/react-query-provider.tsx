@@ -8,12 +8,12 @@ interface IReactQueryProviderProps {
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      refetchOnWindowFocus: false, // Tidak refetch saat window aktif kembali
-      refetchOnReconnect: false, // Tidak refetch saat koneksi kembali
-      refetchOnMount: false, // Tidak refetch saat komponen di-mount ulang
-      retry: false, // Tidak coba ulang query jika error
-      retryOnMount: false, // Tidak retry saat mount ulang
-      networkMode: "always", // Pastikan request tetap bisa berjalan di mode apa pun
+      refetchOnWindowFocus: false, 
+      refetchOnReconnect: false, 
+      refetchOnMount: false, 
+      retry: false, 
+      retryOnMount: false, 
+      networkMode: "always", 
     },
   },
 });
